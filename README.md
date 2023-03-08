@@ -3,8 +3,8 @@
 
 This is the link to the cloudflare tunnel that is hosting it.
 
-https://kingston-raised-tactics-warner.trycloudflare.com
-
+https://kingston-raised-tactics-warner.trycloudflare.com - **WARNING** Project is still in progress, so it may break. Also, it may not be running all the time but I will try to keep it on.
+ 
 ## What I First Learned ##
 The first time I learned python was in 6th grade in an online python programming camp taught by a group of high schoolers. There I learned the basics.<br><br>
 **Stuff like**<br>
