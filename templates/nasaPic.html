@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="myDiv">
+    <h3>{{title}}</h3>
+    <h6>{{date}}</h6>
+    <img src={{url}} style="max-width:100%;"/>
+    <h5>{{explanation}}</h5>
+    <h1>{{next}}</h1>
+</div>
+<div style="width:50%; margin:auto;">
+    <form method="POST" action={{url_for('nasaPic')}}>
+        <input style="float:left;" type="submit" value="Previous Day" name="submit">
+        <input style="margin-left:35%;" type="submit" value="Random date" name="submit">
+        <input style="float:right;" type="submit" value={{date}} name="submit">
+        <input style="font-size:0.00001rem;" type="submit" value={{date}} name="dated">
+    </form>
+</div>
+
+{% endblock %}

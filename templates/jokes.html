@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block content %}
+
+<style>
+img{
+    padding:10px;
+}
+
+.red{
+    background-color: #FF0000;
+}
+
+#repeat {
+    box-shadow: 10px 10px 20px #5A5A5A;
+    background-color: lightgrey;
+    margin: auto;
+    border-radius: 10px;
+    width: 50%;
+    transition: background-color 2s;
+    transition: width 2s;
+}
+
+#repeat:hover{
+    background-color:#f39a00;
+    width:25%;
+}
+
+#colorChange {
+    animation: colorChange 5s infinite;
+}
+
+@keyframes colorChange {
+    25% {background-color:#f39a00;}
+    50% {background-color:#f30000;}
+    75% {background-color:#f39a00;}
+}
+
+</style>
+
+
+<h1>{{cat}}</h1>
+<div id="colorChange">
+        {% for i in range(times) %}
+        <div id="repeat" width="50%" style="text-align:center;">
+            <img src={{images[i]}} height="100"/>
+            <p>    {{jokes[i]}}</p>
+        </div>
+        {% endfor %}
+</div>
+
+{% endblock %}

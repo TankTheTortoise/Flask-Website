@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="myDiv" style="text-align: center;">
+    <h1>
+        Welcome to my first website!
+    </h1>
+</div>
+
+<div class="myDiv" style="text-align:center;">
+    <a href={{url_for('chuck')}}>
+          <h3>
+              You can use my Chuck Norris Joke Generator.
+          </h3>
+    </a>
+</div>
+
+<div class="myDiv" style="text-align:center;">
+    <a href={{url_for('nasa')}}>
+          <h3>
+              Or you can use my Nasa Picture of the Day Generator.
+          </h3>
+    </a>
+</div>
+
+{% endblock %}

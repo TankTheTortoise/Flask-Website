@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<style>
+    .nasa{
+    background-image:url('https://www.nasa.gov/sites/default/files/styles/full_width/public/thumbnails/image/main_image_star-forming_region_carina_nircam_final-1280.jpg?itok=9hyNVMwe');
+    height:570px;
+    width:985px;
+    box-shadow: 10px 10px 20px #5A5A5A;
+    margin: 10px auto 30px;
+    border-radius: 10px;
+    padding: 20px;
+    }
+
+    .big{
+    font-size: 2rem;
+    box-shadow: 20px 20px 20px #004191;
+    border-radius: 10px;
+    }
+    input, label{
+    display:block;
+    }
+
+
+
+</style>
+
+
+<div class="nasa">
+    <form action={{url_for('nasaPic')}} method="post">
+        <label style="font-size:1rem; color:white;" for="date">Choose a date</label>
+        <input class="big" type="date" id="date" min="1995-06-16" max={{date}} name="datedate">
+        <label style="font-size:1rem; color:white;" for="random">Or random</label>
+        <input class="big" type="submit" id="random" name="submit" value="Random date">
+        <br>
+        <input style="font-size:1rem;" type="submit" id="submit" name="submit" value="Fetch Image">
+
+    </form>
+</div>
+{% endblock %}

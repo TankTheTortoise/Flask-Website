@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<style>
+
+
+    *{
+  font-family: arial;
+}
+
+.navbar-brand {
+    float:none;
+    margin:auto;
+    display: block;
+}
+
+iframe{
+    allow:fullscreen;
+}
+
+.myDiv {
+  box-shadow: 10px 10px 20px #5A5A5A;
+  background-color: lightgrey;
+  margin: 10px auto 30px;
+  border-radius: 10px;
+  width: 50%;
+  padding: 20px;
+  }
+
+
+
+
+</style>
+
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css">
+    <title>Seamus' Website</title>
+</head>
+<body>
+
+<nav class="navbar navbar-light bg-light">
+    <a href="/home" class="navbar-brand">Home</a>
+    <a href="/chuck" class="navbar-brand">Chuck Norris Jokes</a>
+    <a href="/nasa" class="navbar-brand">Nasa Picture of the Day</a>
+</nav>
+
+
+<div class="container-fluid">
+    {% block content %}
+    {% endblock %}
+</div>
+
+</body>
+</html>
